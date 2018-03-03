@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+message Foo {
+    message Baz {
+      reserved 1;
+    }
+    string bar = 1;
+    Baz baz = 2;
+}

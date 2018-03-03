@@ -12,7 +12,6 @@ func AllMessages(root *descriptor.FileDescriptorSet, visitCallback VisitCallback
 
 	for _, fdProto := range root.GetFile() {
 		for _, msg := range fdProto.GetMessageType() {
-
 			err := allMessages(msg, types.FullyQualifiedProtoTypeName(fdProto.GetPackage()), visited, visitCallback)
 			if err != nil {
 				return err
